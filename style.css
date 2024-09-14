@@ -1,0 +1,21 @@
+html, body {
+    font-family: Segoe UI Light, Segoe UI, Arial;
+    background: white;
+}
+input {
+    height: 40px;
+    width: 300px;
+    color: black;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+button {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+}

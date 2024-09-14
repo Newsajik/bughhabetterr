@@ -1,0 +1,15 @@
+{
+    "short_name": "Unblock Web",
+    "name": "Unblocked Web",
+    "icons": [
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "https://mark6132014.github.io/unblockedWeb/",
+    "background_color": "#000000",
+    "display": "standalone",
+    "theme_color": "#ff0000"
+  }

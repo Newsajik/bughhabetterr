@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            Unblocked Web
+        </title>
+        <link rel="shortcut icon" href="icon.png">
+        <link rel="stylesheet" href="style.css">
+         <link rel="manifest" href="manifest.json">
+    <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+      </script>
+    </head>
+    <body>
+        <center>
+            <h1>
+                Welcome to the Unblocked Web!
+            </h1>
+            <p>
+                Were you not happy because your adminstrator blocks the websites that you had fun with?
+                <br>
+                Well, there is one option that you could make, it is going here to browse the web!
+            </p>
+            <hr>
+            <p>
+                To get started, type in the website address here:
+            </p>
+            <input type="text" placeholder="Type your URL here..." value="https://example.com" id="address">
+            <br>
+            <br>
+            <button id="browse">
+                Redirect without any blockage.
+            </button>
+            <br>
+            <br>
+            <button id="googleSearch">
+                Redirect to Google (Safe version)
+            </button>
+            <br>
+            <br>
+            <small>
+                There's actually a hint though to find the easter egg, type in https://fall-season.com!
+            </small>
+            <script>
+                document.querySelector("#googleSearch").addEventListener("click", () => {
+                    let input = document.querySelector("#address");
+                    input.value = "https://www.google.com/?igu=1";
+                    setTimeout(() => {
+                        let browseBtn = document.querySelector("#browse");
+                        browseBtn.click();
+                    }, 500);
+                });
+            </script>
+            <hr>
+            <img height="50" width="50" src="warning.png"><span style="font-size: 2em; color: red;">WARNING!</span>
+            <p>
+                Please read this message before you browse and surf:
+                <br>
+                I am not reposible for any malware downloaded, you went to that website, and you are responsible for going there!
+                <br>
+                Some websites may include:
+                <br>
+                Downloads, Forms, Modals, Orientation Locks, Pointer Locks, Popups, Popups that escape the frame, Presentations, Same Origins, and allows all JavaScript scripts to run.
+                <br>
+                Thank you for reading this message.
+                <br>
+                Stay safe.
+            </p>
+            <hr>
+            <h1>
+                How to use it?
+            </h1>
+            <h2>
+                Tutorial for new people on the website!
+            </h2>
+            <p>
+                In this page, copy a web address, or type it in on your own.
+                <br>
+                Then press Redirect. Now when you press it, it will take you to <i>"website.html"</i>, with the url with the hash from the page.
+                <br>
+                Since you went to your first website here, you would see a image of this website's logo. This <b><i>"image"</i></b> is actually a button, and when you click on it, it shows you options on what to do.
+                <br>
+                In the options panel, you would find: A redirect input, so that way you won't have to go back and forth. A homepage button, which sends you to the homepage of this website. A Open in New Tab button, which sends you to the website in a new tab. Finally, a Fullscreen button.
+            </p>
+            <hr>
+            <h1>
+                Behind the Scenes
+            </h1>
+            <p>
+                I used HTML, CSS, and JavaScript to make this whole entire website! You can learn more here:
+                <br>
+                <a href="https://codepen.io">Codepen</a>
+            </p>
+            <hr>
+            <h1>
+                Updates:
+            </h1>
+            <p>
+                Change this website is added to Options!
+                <br>
+                New Easter Egg!
+            </p>
+            <hr>
+            <h1>
+                Coming soon!:
+            </h1>
+            <p>
+               Nothing coming soon, come back again not to miss new features!
+            </p>
+        </center>
+        <script src="scripts.js"></script>
+    </body>
+</html>

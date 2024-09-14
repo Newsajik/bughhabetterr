@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Happy Fall!
+    </title>
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            background: rgb(230, 152, 7);
+        }
+        .title {
+            color: rgb(13, 206, 13);
+        }
+        h1 {
+            color: white;
+        }
+        .title, h1, p {
+            font-family: Arial;
+        }
+        @keyframes fall {
+            from {
+                position: absolute;
+                top: -150px;
+                left: 43%;
+            }
+            to {
+                position: absolute;
+                top: 15px;
+                left: 43%;
+            }
+        }
+        .turkey {
+            transition: 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <img src="turkey.png" height="150" width="150" style="transform: rotate(-12deg); position: absolute; top: -150px; left: 43%;" class="turkey">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="title">
+            <span style="height: 50px; width: 50px; content: url('icon.png');"></span>
+            <br>
+            Unblocked Web
+        </h1>
+        <h1>
+            is introducing <span style="color: orange;" id="fallWord">Fall!</span>
+        </h1>
+        <br>
+        <br>
+        <button onclick="navigator.clipboard.writeText('https://mark6132014.github.io/fall.html'); copiedTxt();" id="copy">
+            Tell your friends!
+        </button>
+        <br>
+        <br>
+        <p style="color: white; display: none;" id="copied">
+            Copied!
+        </p>
+        <svg width="200" height="300" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 100px; left: 10%;">
+            <!-- Tree trunk -->
+            <rect x="90" y="150" width="20" height="50" fill="saddlebrown"></rect>
+            <!-- Tree leaves -->
+            <circle cx="100" cy="130" r="40" fill="red" id="bush1"></circle>
+            <circle cx="70" cy="130" r="30" fill="red" id="bush2"></circle>
+            <circle cx="130" cy="130" r="30" fill="red" id="bush3"></circle>
+        </svg>
+        <svg width="200" height="300" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 100px; right: 10%;">
+            <!-- Tree trunk -->
+            <rect x="90" y="150" width="20" height="50" fill="saddlebrown"></rect>
+            <!-- Tree leaves -->
+            <circle cx="100" cy="130" r="40" fill="red" id="bush1"></circle>
+            <circle cx="70" cy="130" r="30" fill="red" id="bush2"></circle>
+            <circle cx="130" cy="130" r="30" fill="red" id="bush3"></circle>
+        </svg>
+    </center>
+    <script>
+        let word = document.querySelector("#fallWord");
+        let copied = document.querySelector("#copied");
+        let copyBtn = document.querySelector("#copy");
+        function changeColors() {
+            word.style.color = "red";
+            setTimeout(() => {
+                word.style.color = "orange";
+            }, 500);
+        }
+        function copiedTxt() {
+            copied.style.display = "block";
+            copyBtn.style.display = "none";
+            setTimeout(() => {
+                copied.style.display = "none";
+                copyBtn.style.display = "block";
+            }, 3000);
+        }
+        function animate() {
+                document.querySelector(".turkey").style.position = "absolute";
+                document.querySelector(".turkey").style.top = "-150px";
+                document.querySelector(".turkey").style.left = "43%";
+                document.querySelector(".turkey").style.animation = "fall 5s forwards";
+                document.querySelector(".turkey").style.position = "absolute";
+                document.querySelector(".turkey").style.top = "15px";
+                document.querySelector(".turkey").style.left = "43%";
+        }
+        setInterval(changeColors, 1000);
+        setTimeout(animate, 2000);
+    </script>
+</body>
+</html>
